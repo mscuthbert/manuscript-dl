@@ -168,7 +168,7 @@ def download_block(url, filename, nil_block):
     '''
     Download single page block (rectangular). This method will retry up to
     MAX_BLOCK_DOWNLOAD_RETRIES times if downloaded image is not JPEG.
-    Delays between retries are choosen according to the binary exponential
+    Delays between retries are chosen according to the binary exponential
     backoff strategy.
     '''
     for i in range(MAX_BLOCK_DOWNLOAD_RETRIES):
@@ -222,7 +222,7 @@ def download_page(resolution, base_dir, manuscript, page):
         filename = J(base_dir, manuscript, page,
                      '{0}_{1}_{2}.jpg'.format(page, row, column))
 
-        #print('Getting block {0}x{1}'.format(row, column))
+        # print('Getting block {0}x{1}'.format(row, column))
         url = URL_IMAGE_BLOCK.format(manuscript_and_page=page,
                                      resolution=resolution,
                                      column=column, row=row)
